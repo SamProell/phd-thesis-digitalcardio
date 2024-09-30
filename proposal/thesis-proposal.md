@@ -3,11 +3,16 @@ title: "Detecting cardiovascular diseases with smartphones and AI"
 subtitle: (working title) Thesis proposal
 author: Samuel Pröll [samuel.proell@i-med.ac.at](mailto:samuel.proell@i-med.ac.at)
 date: September 2024
-geometry:
-  - top=30mm
-  - left=25mm
+bibliography: thesis-proposal.bib
+csl: chicago-author-date.csl
+
+section-numbering: "1.1"
 papersize: a4
---- 
+margin:
+  x: 2.5cm
+  y: 4cm
+mainfont: "Linux Libertine" # "New Computer Modern"
+---
 
 # Introduction
 Cardiovascular diseases are the leading cause of mortality worldwide, accounting
@@ -129,5 +134,3 @@ near future:
   a larger scale.
 - Identify suitable data sources (public and internal) and corresponding clinical
   challenges that can be addressed with modern approaches in artificial intelligence.
-
-# References
