@@ -1,6 +1,6 @@
 ---
-title: "Detecting cardiovascular diseases with smartphones and AI"
-subtitle: (working title) Thesis proposal
+title: "Detecting cardiovascular diseases with smartphones and AI (working title)"
+subtitle: Thesis proposal
 author: Samuel Pröll [samuel.proell@i-med.ac.at](mailto:samuel.proell@i-med.ac.at)
 date: September 2024
 bibliography: thesis-proposal.bib
@@ -17,19 +17,23 @@ mainfont: "Linux Libertine" # "New Computer Modern"
 # Introduction
 Cardiovascular diseases are the leading cause of mortality worldwide, accounting
 for 1.71 million deaths in 2021 in Europe alone [@EuroStat_cardiovascular_2024].
-Early detection of heart disease can improve patient outcome and
-reduce the burden on the health care system [@OudeWolcherink_health_2023].
-At the same time, advances in sensing technology, information processing and artificial
-intelligence offer new ways to identify patients at risk and diagnose diseases.
-This work will explore ways to incorporate artificial intelligence into various steps
+Early detection of heart disease can both considerably improve patient outcome and
+drastically reduce the burden on the health care system [@OudeWolcherink_health_2023].
+At the same time, recent advances in sensing technology, information processing and
+artificial intelligence (AI) offer new ways to identify patients at risk and diagnose
+diseases.
+This work will explore ways to incorporate AI into different steps
 along the clinical pathway.
 
 First, we leverage sensors available in consumer smartphones
-to capture different cardiac signals. We can then apply signal processing and machine
-learning to identify heart diseases. This paths the way towards solutions for
-accessible cardiac screening and risk prediction.
-Second, we implement and extend state-of-the-art solutions in artificial intelligence
-for processing multi-modal clinical data. Utilizing modern approaches like
+to capture various cardiac biosignals. We can then apply signal processing and machine
+learning to identify novel approaches towards heart disease screening.
+This paves the way towards solutions for easily accessible cardiac screening and risk
+prediction outside the clinical setting.
+Second, we implement and extend state-of-the-art solutions in AI
+for processing multi-modal data, such as a combination of wearable data and clinical
+data modalities.
+Utilizing modern approaches like
 self-supervised pretraining and foundation models, we can build reliable and
 (data-)efficient algorithms.
 
@@ -39,15 +43,15 @@ The smartphone has become increasingly important as a tool for health
 screening [@Moses_smartphone_2022]. By now, most of the population, including the elderly own a
 smartphone with capable sensors. In the literature, we find several different approaches
 to obtain and interpret cardiac signals from smartphones.
-In a recent study, Haddad et al. (2024) used the gyroscope and accelerometer sensors
+In a recent study, @Haddad_smartphonebased_2024 used the gyroscope and accelerometer sensors
 on smartphones to record the cardiac vibrations of the chest. They are able to identify
 patients with stage C heart failure with an AUC of 0.95 using basic features extracted
-from the vibration signals. [@Haddad_smartphonebased_2024]
+from the vibration signals.
 Several studies have shown that smartphone-based screening for atrial fibrillation is
-possible. Rizas et al. (2022) obtained a signal of the heart rhythm through camera-based
+possible. @Rizas_smartphonebased_2022 obtained a signal of the heart rhythm through camera-based
 finger PPG. Participants placed their finger on the camera module and the camera
 recorded the changes in color introduced by blood volume changes with each heart
-beat.&nbsp;[@Rizas_smartphonebased_2022]
+beat.
 
 Only little literature is available on using smartphones for heart auscultation. Most
 studies rely on a separate (digital) stethoscope to acquire heart sound signals.
@@ -56,7 +60,7 @@ classification of aortic valve stenosis that can run on a smartphone ($F_1=0.93$
 Phonocardiography data is recorded with a digital stethoscope and then transferred to
 the app.
 
-## Modern approaches in artificial intelligence
+## Modern approaches in AI
 To build robust deep learning algorithms even from a small set of labelled data,
 many researchers turn towards self-supervised learning (SSL) with unlabelled data for
 pretraining.
@@ -69,17 +73,17 @@ tasks, the model may be required to identify or even inverse an applied
 transformation.&nbsp;[@Gui_survey_2024]
 
 Using such techniques, researchers build towards foundation models, which offer a strong
-backbone for data processing, that can be extended or fine-tuned to solve specific
-tasks. An example application is given by Abbaspourazad et al. (2024) who built a
-foundation model on ECG and PPG data from wearable devices. The model was able to encode
+backbone for data processing, that can be extended or fine-tuned to solve more specific
+tasks. An example application is given by @Abbaspourazad_largescale_2024, who built a
+foundation model on ECG and PPG data from wearable devices. Their model was able to encode
 participant characteristics such as demographics and health conditions without being
-specifically trained on these targets.&nbsp;[@Abbaspourazad_largescale_2024]
+specifically trained on these targets.
 
 Extensive research in deep learning technology over the past 10+ years has yielded
 many promising architectures that are suitable for multi-modal clinical data.
-Moor et al. (2023) envision so-called generalist medical AI, in which any modality is
+@Moor_foundation_2023 envision so-called generalist medical AI, in which any modality is
 translated into tokens in a shared latent space. The stream of tokens can then be fed
-into a sequence model such as a transformer.&nbsp;[@Moor_foundation_2023]
+into a sequence model such as a transformer, to perform various complex tasks.
 
 # Methods
 In an effort to combine state-of-the-art deep learning with smartphone-based cardiac
@@ -92,7 +96,7 @@ Before gathering a dataset, different recording scenarios need to be devised and
 Preliminary explorations will reveal, which sensors are most suitable for specific tasks
 and which measurement protocols are appropriate to obtain strong signals.
 Multiple factors have to be considered such as sensor placement, patient position,
-expected patient behavior and measurement duration.
+measurement duration and expected patient behavior.
 
 Besides generating new data, we may also use existing data (public and internal) for
 working towards improved biosignal and image processing methods. By building models
@@ -133,4 +137,4 @@ near future:
   scenarios. Using these results we devise recording protocols that could be applied on
   a larger scale.
 - Identify suitable data sources (public and internal) and corresponding clinical
-  challenges that can be addressed with modern approaches in artificial intelligence.
+  challenges that can be addressed with modern approaches in AI.
